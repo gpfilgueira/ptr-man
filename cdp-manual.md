@@ -48,8 +48,8 @@ no cdp enable
 ```bash
 exit
 show cdp
-show cdp neighbors
 show cdp traffic
+show cdp neighbors
 show cdp neighbors detail
 show running config
 show running config | include <cdp, protocols> #Include funciona como grep
