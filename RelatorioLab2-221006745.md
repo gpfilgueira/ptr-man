@@ -15,24 +15,6 @@
 
 ![Topologia](images/topologia2.jpeg "Topologia")
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
 # 2 - Configuração Roteadores
 
 ---
@@ -82,18 +64,12 @@ router ospf 1
 network 192.168.2.2 0.0.0.3 area 0
 ```
 
-<br>
-<br>
-<br>
-
 ### Roteador 4
 
 ```
 router ospf 1 
 network 192.168.4.2 0.0.0.3 area 1
 ```
-
-<br>
 
 ## Configuração de áreas e propagação de rotas
 
@@ -122,8 +98,6 @@ area 1 range 192.168.5.0 255.255.255.0
 router ospf 1
 default-information originate
 ```
-
-<br>
 
 # 3 - Configuração Computador (simulando uma conexão da estrutura a uma rede externa)
 

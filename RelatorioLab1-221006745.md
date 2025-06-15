@@ -15,26 +15,6 @@
 
 ![Topologia](images/topologia1.jpeg "Topologia")
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
 # 2 - Configurar Roteadores
 
 ---
@@ -80,11 +60,6 @@ ip routing
 ip route 192.168.<tag de uma vlan não ligada ao rotedor>.0 255.255.255.0 <ip da interface que faz o proxímo salto>
 # repetir para as 4 vlans que o roteador não conhece
 ```
-
-<br>
-<br>
-<br>
-<br>
 
 # 3 - Configurar Switches
 
@@ -169,32 +144,6 @@ save
 ```
 save
 ```
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 # 6 - Roteamentos estáticos de IP
 

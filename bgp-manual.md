@@ -9,14 +9,14 @@
 
 ---
 
-# 1 - PrÃ©-requisitos
+# 1 - Pré-requisitos
 
-- Topologia fÃ­sica devidamente conectada
+- Topologia física devidamente conectada
 - Interfaces e dispositivos com IPs configurados
 
-# 2 - ConfiguraÃ§Ã£o Roteadores
+# 2 - Configuração Roteadores
 
-## ConfiguraÃ§Ã£o do BGP em cada Roteador
+## Configuração do BGP em cada Roteador
 
 ```bash
 enable
@@ -26,12 +26,12 @@ router bgp <AS_NUMBER>
 network <NETWORK> mask <SUBNET_MASK>
 neighbor <IP_ADDRESS> remote-as <AS_NUMBER>
 
-# (Opcional) DescriÃ§Ã£o de vizinho
+# (Opcional) Descrição de vizinho
 neighbor <IP_ADDRESS> description <TEXT>
 ```
-# 3 - Comandos de verificaÃ§Ã£o
+# 3 - Comandos de verificação
 
-## EspecÃ­ficos BGP 
+## Específicos BGP 
 
 ```bash
 exit
@@ -69,14 +69,14 @@ show interface <interface>
 ping <ip>
 traceroute <ip> #nos VPCS trace
 
-# OpÃ§Ãµes de pipe 
+# Opções de pipe 
 |include <keyword>
 |exclude <keyword>
 |begin <keyword>
 |section <keyword>
 ```
 
-# 4 - Salvar configuraÃ§Ãµes no roteador
+# 4 - Salvar configurações no roteador
 
 ```bash
 write memory
