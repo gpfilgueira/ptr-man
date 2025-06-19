@@ -1,6 +1,4 @@
 
----
-
 > **Manual VRF com BGP - Protocolos de Transporte e Roteamento**
 >
 > > **Gustavo Pimentel Filgueira**
@@ -23,7 +21,7 @@ ip routing
 
 # 2 - Criação e Associação de VRF
 
-## Criar VRFs
+## Opção 1: Usando `ip vrf`
 
 ```bash
 ip vrf CLIENTE1
@@ -37,23 +35,37 @@ ip vrf CLIENTE2
  route-target import 200:1
 ```
 
+## Opção 2: Usando `vrf definition`
+
+```bash
+vrf definition CLIENTE1
+ rd 100:1
+ address-family ipv4
+  route-target export 100:1
+  route-target import 100:1
+
+vrf definition CLIENTE2
+ rd 200:1
+ address-family ipv4
+  route-target export 200:1
+  route-target import 200:1
+```
+
 ## Associar VRF às interfaces
 
 ```bash
 interface GigabitEthernet0/0
- ip vrf forwarding CLIENTE1
+ vrf forwarding CLIENTE1
  ip address <IP> <MASK>
 
 interface GigabitEthernet0/1
- ip vrf forwarding CLIENTE2
+ vrf forwarding CLIENTE2
  ip address <IP> <MASK>
 ```
 
 ---
 
 # 3 - Configuração do BGP com VRF
-
-## Ativar BGP com VRF
 
 ```bash
 router bgp <AS_NUMBER>
@@ -73,12 +85,12 @@ router bgp <AS_NUMBER>
 # 4 - Verificação e Testes
 
 ```bash
+show ip vrf
 show ip route vrf CLIENTE1
 show ip bgp vpnv4 all
 show ip bgp vpnv4 vrf CLIENTE1
 show ip bgp vpnv4 vrf CLIENTE2
 
-show ip vrf
 ping vrf CLIENTE1 <IP>
 traceroute vrf CLIENTE2 <IP>
 ```
@@ -91,4 +103,3 @@ traceroute vrf CLIENTE2 <IP>
 write memory
 ```
 
----
